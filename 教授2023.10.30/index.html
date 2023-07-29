@@ -9,25 +9,8 @@
       from {background-color:#ee0000;}
       to {background-color:#66ccff;}
     }
-    @keyframes mysecond {
-      0% {opacity:0}
-      25% {opacity:100}
-      50% {opacity:0}
-      100% {opacity:0}
-    }
-    @keyframes mythird {
-      0% {opacity:0}
-      50% {opacity:0}
-      75% {opacity:100}
-      100% {opacity:0}
-    }
-    img #1{
-      animation: mysecond 40s infinite alternate;
-    }
-    img #2{
-      animation: mythird 40s infinite alternate;
-    }
     h1{
+      font-size:64px;
       animation: myfirst 1s infinite alternate;
       }
     .button {
@@ -51,9 +34,9 @@
     .botton:active {
       background-color:#bbbbbb;
     } 
-    img #1{
+    img{
       position:absolute;
-      border:3px solid #bbb;
+      border:3px solid #bbbbbb;
       border-radius:9px; 
       padding:4px;
       width:400px;
@@ -63,10 +46,10 @@
 <body>
 <audio src="wav/keli.wav" controls="controls" preloop="prelood" loop="loop">
 </audio>
-<img id="1" src="./images/IMG_20230729_153809.jpg"/>
+<img src="./images/IMG_20230729_153809.jpg"/>
 <h1>可莉祝你
 <p>生 日 快 乐！！</p></h1>
 <button class="button">Blessing for your birthday</button>
-<img id="2" src="./images/Screenshot_20230729_155643.jpg"/>
+<img src="./images/Screenshot_20230729_155643.jpg"/>
 </body>
 </html>    
