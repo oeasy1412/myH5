@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <title>无用的东西（确信）</title>
   <style type="text/css"> 
-    #kl{
-      width:600px;
-    }
     </style>
     <body>
-    <audio id="bgm" src=".images/audio.wav" autoplay="autoplay" loop="loop"></audio>
-    <div id="kl"></div>
+    <audio src="images/audio.wav" autoplay="autoplay" loop="loop" controls="controls"/></audio>
+    <img src="images/keli1.jpg"/>
     </body>
   <script type="text/javascript">
     function a(){
@@ -25,8 +22,8 @@
     function b(){
         var er=prompt("请输入：可莉好可爱\n（以求可莉解救教授）");
         tl();
-        document.getElementById("kl").innerHTML="<img src=\"images/keli1.jpg\"/>";
-        document.getElementById("bgm").play();
+        document.write("你好！我是可莉")
+        
     }
     }
     function tl(){
