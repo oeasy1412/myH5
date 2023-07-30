@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>game</title>
+  <style type="text/css"> 
+    #container{
+      width:800px;
+      height:400px;
+      border:black solid 15px;
+      margin:0 auto;
+    }
+    #container>div{
+      width:400px;
+      height:400px;
+      float:left;
+    }
+    #mine{
+      background-color:#66ccff;
+    }
+    #com{
+      background-color:#00ffcc;
+    }
+    h1{
+      margin-top:0;
+      text-align:center;
+    #container>#result{
+      font-size:50px;
+      width:500px;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <div id="mine">
+    <div id="myc"></div>
+    <input type="button" value="物攻" onclick="wu()/">
+    <input type="button" value="法球" onclick="fa()/">
+    <input type="button" value="红药" onclick="hong()/">
+    <input type="button" value="蓝药" onclick="lan()/">
+    <input type="button" value="大招" onclick="R()/">
+  </div>
+  <div id="com">
+    <div id="comc"></div>
+  </div>
+  <div id="result"></div>
+</div>
+</body>
+<script>
+  var k=3*Math.random();
+  var grade=1;
+  var myHP,myPP,mywugong,myfagong,mywuk,myfak,myhong,mylan=100,100,40,30,5,5,2,1;
+  var comHP,comwugong,comfagong,comwuk,comfak;
+  function wu(){
+    document.getElementById(myc).innerHTML="img src=\"images/"/";
+    judge("wu");
+  }
+  function fa(){
+    document.getElementById(myc).innerHTML="img src=\"images/"/";
+    judge("fa");
+  }
+  function hong(){
+    document.getElementById(myc).innerHTML="img src=\"images/"/";
+    judge("hong");
+  }
+  function lan(){
+    document.getElementById(myc).innerHTML="img src=\"images/"/";
+    judge("lan");
+  }
+  function R(){
+    document.getElementById(myc).innerHTML="img src=\"images/"/";
+    judge("R")
+  }
+  function judge(myc){
+    var comresult=comc();
+    if(myc=="wu"){
+      comHP-=mywugong-comwuk;
+    }
+    if(myc=="fa"){
+      comHP-=myfagong-comfak;
+    }
+    if(myc=="hong"){
+      myHP+=mywugong+myfagong;
+      myhong-=1;
+    }
+    if(myc=="lan"){
+      myPP+=50;
+      mylan-=1;
+    }
+    if(myc=="R"){
+      comHP-==3*myfagong;
+      myPP-=50;
+    }
+    document.getElementById("result").innerHTML="我方剩余血量："+myHP\n"对手剩余血量："+comHP;
+    if(comHP<=0){
+      grade+=1;
+      document.getElementById("result").innerHTML="you win 准备进入第"+grade+"关";
+      
+     }
+    if(myHP<=0){
+      document.getElementById("result").innerHTML="you die 止步于第"+grade+"关";
+    }
+    if(grade==4){
+      document.getElementById("result").innerHTML="NB，总通关了！当前HP："+myHP;
+    }
+</script>
+</html>    
