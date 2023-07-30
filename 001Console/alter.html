@@ -9,8 +9,8 @@
     }
     </style>
     <body>
-        <audio id="bgm" src="images/audio.wav" autoplay="autoplay">
-        <div id="kl"></div>
+    <audio id="bgm" src="images/audio.wav" autoplay="autoplay" loop="loop"></audio>
+    <div id="kl"></div>
     </body>
   <script type="text/javascript">
     function a(){
@@ -28,7 +28,7 @@
         document.getElementById("kl").innerHTML="<img src=\"images/keli1.jpg\"/>";
     }
     function q(){
-        document.getElementById("bgm").play();
+        document.getElementById("bgm").pause();
     }
     function tl(){
       alert("你猜猜一会儿会发生什么？");
