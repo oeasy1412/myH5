@@ -55,23 +55,23 @@
   var myHP,myPP,mywugong,myfagong,mywuk,myfak,myhong,mylan=100,100,30,20,5,5,2,1;
   var comHP,comwugong,comfagong,comwuk,comfak=75,15,20,5,0;
   function wu(){
-    document.getElementById("myc").innerHTML="img src=\"images/wu.png"/";
+    document.getElementById("myc").innerHTML="<img src=\"images/wu.png\"/>";
     judge("wu");
   }
   function fa(){
-    document.getElementById("myc").innerHTML="img src=\"images/"/";
+    document.getElementById("myc").innerHTML="<img src=\"images/wu.png\"/>";
     judge("fa");
   }
   function hong(){
-    document.getElementById("myc").innerHTML="img src=\"images/"/";
+    document.getElementById("myc").innerHTML="<img src=\"images/wu.png\"/>";
     judge("hong");
   }
   function lan(){
-    document.getElementById("myc").innerHTML="img src=\"images/"/";
+    document.getElementById("myc").innerHTML="<img src=\"images/wu.png\"/>";
     judge("lan");
   }
   function R(){
-    document.getElementById("myc").innerHTML="img src=\"images/"/";
+    document.getElementById("myc").innerHTML="<img src=\"images/wu.png\"/>";
     judge("R")
   }
   function judge(myc){
@@ -137,15 +137,15 @@
     }
 function comresult(){
     if(k<2.6){
-        document.getElementById("comc").innerHTML=;
+        document.getElementById("comc").innerHTML="m";
         return "wu";
     }
     else if(k<5){
-        document.getElementById("comc").innerHTML=;
+        document.getElementById("comc").innerHTML="m";
         return "fa";
     }
     else{
-        document.getElementById("comc").innerHTML=;
+        document.getElementById("comc").innerHTML="m";
         return "R";
     }
 }
