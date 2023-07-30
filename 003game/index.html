@@ -25,7 +25,7 @@
       margin-top:0;
       text-align:center;
     #container>#result{
-      font-size:50px;
+      font-size:30px;
       width:500px;
       text-align:center;
     }
@@ -34,6 +34,7 @@
 <body>
 <div id="container">
   <div id="mine">
+    <h1 id="myname">玩家</h1>
     <div id="myc"></div>
     <input type="button" value="物攻" onclick="wu()/">
     <input type="button" value="法球" onclick="fa()/">
@@ -42,13 +43,14 @@
     <input type="button" value="大招" onclick="R()/">
   </div>
   <div id="com">
+    <h1 id="comname">电脑</h1>
     <div id="comc"></div>
   </div>
   <div id="result"></div>
 </div>
 </body>
 <script>
-  var k=3*Math.random();
+  var k=*6Math.random();
   var grade=1;
   var myHP,myPP,mywugong,myfagong,mywuk,myfak,myhong,mylan=100,100,40,30,5,5,2,1;
   var comHP,comwugong,comfagong,comwuk,comfak;
@@ -83,13 +85,14 @@
     if(myc=="hong"){
       myHP+=mywugong+myfagong;
       myhong-=1;
+      mywuk+=5;
     }
     if(myc=="lan"){
       myPP+=50;
       mylan-=1;
     }
     if(myc=="R"){
-      comHP-==3*myfagong;
+      comHP-=3*myfagong;
       myPP-=50;
     }
     document.getElementById("result").innerHTML="我方剩余血量："+myHP\n"对手剩余血量："+comHP;
@@ -104,5 +107,24 @@
     if(grade==4){
       document.getElementById("result").innerHTML="NB，总通关了！当前HP："+myHP;
     }
+function comresult(){
+    if(k<2.6){
+        document.getElementById("comc").innerHTML=;
+        return "wu";
+    }
+    else if(k<5){
+        document.getElementById("comc").innerHTML=;
+        return "fa";
+    }
+    else{
+        document.getElementById("comc").innerHTML=;
+        return "R";
+    }
+}
+function onlywu(){
+    document.getElementById("comc").innerHTML=;
+    document.getElementById("comname").innerHTMLe"平砍哥"
+    return "wu";
+}
 </script>
 </html>    
