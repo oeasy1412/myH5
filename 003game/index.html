@@ -52,8 +52,8 @@
 <script>
   var k=*6Math.random();
   var grade=1;
-  var myHP,myPP,mywugong,myfagong,mywuk,myfak,myhong,mylan=100,100,40,30,5,5,2,1;
-  var comHP,comwugong,comfagong,comwuk,comfak;
+  var myHP,myPP,mywugong,myfagong,mywuk,myfak,myhong,mylan=100,100,30,20,5,5,2,1;
+  var comHP,comwugong,comfagong,comwuk,comfak=75,15,20,5,0;
   function wu(){
     document.getElementById(myc).innerHTML="img src=\"images/"/";
     judge("wu");
@@ -75,7 +75,13 @@
     judge("R")
   }
   function judge(myc){
-    var comresult=comc();
+    var comresult;
+    if(grade==1){
+        comresult=onlywu();
+    }    
+    else{
+        comresult=csomc();
+    }
     if(myc=="wu"){
       comHP-=mywugong-comwuk;
     }
@@ -95,11 +101,33 @@
       comHP-=3*myfagong;
       myPP-=50;
     }
+    if(comc=="wu"{
+      myHP-=comwugong-mywuk;
+    }
+    if(comc=="fa"){
+      myHP-=comfagong-myfak;
+    }
+    if(comc=="R"{
+        myHP-=2*comfagong-myfak;
+    }
     document.getElementById("result").innerHTML="我方剩余血量："+myHP\n"对手剩余血量："+comHP;
     if(comHP<=0){
       grade+=1;
       document.getElementById("result").innerHTML="you win 准备进入第"+grade+"关";
-      
+      up();
+      up();
+        if(grade==2){
+            comHP=100;
+            comwugong+=5;
+            comwuk+=3;
+            comfak+=3;
+        }
+        else{
+            comwugong+=10;
+            comfagong+=6;
+            comwuk+=10;
+            comfak+=6;
+        }
      }
     if(myHP<=0){
       document.getElementById("result").innerHTML="you die 止步于第"+grade+"关";
@@ -125,6 +153,35 @@ function onlywu(){
     document.getElementById("comc").innerHTML=;
     document.getElementById("comname").innerHTMLe"平砍哥"
     return "wu";
+}
+function up(){
+    var upp=prompt("请选择增益：\n1 物攻+10\n2 法强+6\n3 物抗+5法抗+1\n4 物抗+1法抗+3");
+    if(upp==1){
+        mywugong+=10;
+    }
+    else if(upp==2){
+        myfagong+=6;
+    }
+    else if(upp==3){
+        mywuk+=5;
+        myfak+=1;
+    }
+    else if(upp==4){
+        mywuk+=1;
+        myfak+=3;
+    }
+    else if(upp==2050){
+        myPP+=200;
+    }
+    else if(upp==2010){
+        myhong+=2;
+    }
+    else if(upp)==2008{
+        myfagong+=18;
+    }
+    else{
+        myHP-=1;
+    }
 }
 </script>
 </html>    
