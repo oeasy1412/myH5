@@ -9,7 +9,7 @@
     }
     </style>
     <body>
-    <audio id="bgm" src="images/audio.wav" autoplay="autoplay" loop="loop"></audio>
+    <audio id="bgm" src=".images/audio.wav" autoplay="autoplay" loop="loop"></audio>
     <div id="kl"></div>
     </body>
   <script type="text/javascript">
@@ -26,9 +26,8 @@
         var er=prompt("请输入：可莉好可爱\n（以求可莉解救教授）");
         tl();
         document.getElementById("kl").innerHTML="<img src=\"images/keli1.jpg\"/>";
+        document.getElementById("bgm").play();
     }
-    function q(){
-        document.getElementById("bgm").pause();
     }
     function tl(){
       alert("你猜猜一会儿会发生什么？");
